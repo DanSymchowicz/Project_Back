@@ -1,0 +1,20 @@
+{"_id":{"$oid":"5ddb94c6fc13ae640c000014"},"location":"ethiopia","personsInHouse":{"$numberInt":"4"},"houseSize":"medium"}
+{"_id":{"$oid":"5ddb94c6fc13ae640c000015"},"location":"czech republic","personsInHouse":{"$numberInt":"6"},"houseSize":"small"}
+{"_id":{"$oid":"5ddb94c6fc13ae640c000016"},"location":"italy","personsInHouse":{"$numberInt":"2"},"houseSize":"big"}
+{"_id":{"$oid":"5ddb94c6fc13ae640c000017"},"location":"greece","personsInHouse":{"$numberInt":"4"},"houseSize":"medium"}
+{"_id":{"$oid":"5ddb94c6fc13ae640c000018"},"location":"china","personsInHouse":{"$numberInt":"5"},"houseSize":"medium"}
+{"_id":{"$oid":"5ddb94c6fc13ae640c000019"},"location":"poland","personsInHouse":{"$numberInt":"4"},"houseSize":"big"}
+{"_id":{"$oid":"5ddb94c6fc13ae640c00001a"},"location":"thailand","personsInHouse":{"$numberInt":"1"},"houseSize":"medium"}
+{"_id":{"$oid":"5ddb94c6fc13ae640c00001b"},"location":"china","personsInHouse":{"$numberInt":"5"},"houseSize":"small"}
+{"_id":{"$oid":"5ddb94c6fc13ae640c00001c"},"location":"morocco","personsInHouse":{"$numberInt":"3"},"houseSize":"big"}
+{"_id":{"$oid":"5ddb94c6fc13ae640c00001d"},"location":"china","personsInHouse":{"$numberInt":"1"},"houseSize":"big"}
+{"_id":{"$oid":"5ddb94c6fc13ae640c00001e"},"location":"malaysia","personsInHouse":{"$numberInt":"1"},"houseSize":"medium"}
+{"_id":{"$oid":"5ddb94c6fc13ae640c00001f"},"location":"slovenia","personsInHouse":{"$numberInt":"2"},"houseSize":"small"}
+{"_id":{"$oid":"5ddb94c6fc13ae640c000020"},"location":"philippines","personsInHouse":{"$numberInt":"5"},"houseSize":"medium"}
+{"_id":{"$oid":"5ddb94c6fc13ae640c000021"},"location":"mexico","personsInHouse":{"$numberInt":"3"},"houseSize":"big"}
+{"_id":{"$oid":"5ddb94c6fc13ae640c000022"},"location":"ecuador","personsInHouse":{"$numberInt":"2"},"houseSize":"big"}
+{"_id":{"$oid":"5ddb94c6fc13ae640c000023"},"location":"china","personsInHouse":{"$numberInt":"6"},"houseSize":"big"}
+{"_id":{"$oid":"5ddb94c6fc13ae640c000024"},"location":"albania","personsInHouse":{"$numberInt":"6"},"houseSize":"medium"}
+{"_id":{"$oid":"5ddb94c6fc13ae640c000025"},"location":"japan","personsInHouse":{"$numberInt":"2"},"houseSize":"small"}
+{"_id":{"$oid":"5ddb94c6fc13ae640c000026"},"location":"peru","personsInHouse":{"$numberInt":"2"},"houseSize":"small"}
+{"_id":{"$oid":"5ddb94c6fc13ae640c000027"},"location":"russia","personsInHouse":{"$numberInt":"5"},"houseSize":"medium"}
