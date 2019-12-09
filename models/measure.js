@@ -16,7 +16,7 @@ var measureSchema = {
     value: {
         type: Number,
         required: true
-    },
+    }
 };
 
 
