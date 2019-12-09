@@ -16,8 +16,7 @@ var measureSchema = {
     value: {
         type: Number,
         required: true
-    },
+    }
 };
-
 
 module.exports = measureSchema;
