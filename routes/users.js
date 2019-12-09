@@ -9,6 +9,6 @@ usersRouter.get('/',user.findAll);
 usersRouter.get('/:userId',user.findOne);
 
 // creation d'un user
-usersRouter.put('/', user.create);
+usersRouter.put('/add', user.create);
 
 module.exports = usersRouter;

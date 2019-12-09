@@ -13,7 +13,7 @@ const sensorSchema = new mongoose.Schema( {
         required: true
     },
     userID: {
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         required: true
     }
 },
