@@ -11,4 +11,7 @@ usersRouter.get('/:userId',user.findOne);
 // creation d'un user
 usersRouter.put('/add', user.create);
 
+//suppression d'un user avec l'ID
+usersRouter.delete('/:userId', user.delete);
+
 module.exports = usersRouter;
