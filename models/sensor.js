@@ -1,6 +1,6 @@
 var Schema = mongoose.Schema;
 
-var measureSchema = {
+var sensorSchema = {
     creationDate: {
         type: String,
         required: true
@@ -15,4 +15,4 @@ var measureSchema = {
     }
 };
 
-module.exports = measureSchema;
+module.exports = sensorSchema;
