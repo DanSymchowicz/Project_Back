@@ -20,4 +20,4 @@ var measureSchema = {
 };
 
 
-module.exports = measureSchema;
+module.exports = mongoose.model('Measure', measureSchema);
