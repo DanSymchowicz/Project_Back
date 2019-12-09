@@ -1,6 +1,10 @@
-var Schema = mongoose.Schema;
+const mongoose = require('mongoose');
 
-var measureSchema = {
+const measureSchema = new mongoose.Schema({
+
+    _Id : {
+        type: mongoose.Schema.Types.ObjectId
+    },
     type: {
         type: String,
         required: true
@@ -17,7 +21,8 @@ var measureSchema = {
         type: Number,
         required: true
     }
-};
+},
+{collection:"Measure"});
 
 
 module.exports = mongoose.model('Measure', measureSchema);

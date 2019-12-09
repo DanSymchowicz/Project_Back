@@ -1,6 +1,9 @@
-var Schema = mongoose.Schema;
+const mongoose = require('mongoose');
 
-var sensorSchema = {
+const sensorSchema = new mongoose.Schema( {
+    _Id : {
+        type: mongoose.Schema.Types.ObjectId
+    },
     creationDate: {
         type: String,
         required: true
@@ -13,6 +16,7 @@ var sensorSchema = {
         type: Schema.Types.ObjectId,
         required: true
     }
-};
+},
+{collection:"Sensor"});
 
-module.exports = sensorSchema;
+module.exports = mongoose.model('Sensor', sensorSchema);
