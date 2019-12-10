@@ -39,7 +39,7 @@ exports.findOne = (req, res) => {
   // Create and Save a new User
 exports.create = (req, res) => {
   // Validate request
-  if (req.body.location==""|| req.body.personsInHouse==""||req.body.houseSize=="") {
+  if (req.body.newUser.location==""|| req.body.newUser.personsInHouse==""||req.body.newUser.houseSize=="") {
     // If firstName is not present in body reject the request by
     // sending the appropriate http code
     return res.status(400).send({
@@ -48,9 +48,9 @@ exports.create = (req, res) => {
   }
   // Create a new User
   const user = new User({
-    location: req.body.location,
-    personsInHouse: req.body.personsInHouse || '',
-    houseSize: req.body.houseSize || '',
+    location: req.body.newUser.location,
+    personsInHouse: req.body.newUser.personsInHouse || '',
+    houseSize: req.body.newUser.houseSize || '',
   });
   // Save User in the database
   user
@@ -58,9 +58,9 @@ exports.create = (req, res) => {
     .then(data => {
       // we wait for insertion to be complete and we send the newly user integrated
       res.send(data);
-      console.log(req.body.location);
-      console.log(req.body.personsInHouse);
-      console.log(req.body.houseSize);
+      console.log(req.body.newUser.location);
+      console.log(req.body.newUser.personsInHouse);
+      console.log(req.body.newUser.houseSize);
     })
     .catch(err => {
       // In case of error during insertion of a new user in database we send an
