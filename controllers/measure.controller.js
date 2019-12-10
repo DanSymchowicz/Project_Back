@@ -67,6 +67,7 @@ exports.moyenneTemperature = (req, res) => {
               cpt+= element.value;
       });
       const nbv=cpt/measure.length;
+      nbv = Math.trunc(nbv);
       res.status(200).json({nbv});
     })
     .catch(err => {
@@ -84,7 +85,8 @@ exports.moyenneHumidity = (req, res) => {
     measure.forEach(element => {
               cpt+= element.value;
       });
-      const nbv=cpt/measure.length;
+      var nbv=cpt/measure.length;
+      nbv = Math.trunc(nbv);
       res.status(200).json({nbv});
     })
     .catch(err => {
@@ -103,6 +105,7 @@ exports.moyenneAirPo = (req, res) => {
               cpt+= element.value;
       });
       const nbv=cpt/measure.length;
+      nbv = Math.trunc(nbv);
       res.status(200).json({nbv});
     })
     .catch(err => {
@@ -119,6 +122,26 @@ exports.valHumidity = (req, res) => {
       res.status(200).json({measure});
     })
     .catch(err => {
+      res.status(500).send({
+        message: err.message || 'Some error occurred while retrieving measure.'
+      }); 
+    });
+};
+
+varMatch = {$match : {"type":"humidity"}};
+varProject = {$project : {"creationDate":1, "value":1, "_id":0}};
+varSort = {$sort : {"value":-1}};
+
+
+// Trier + grosse valeurs des humidity
+exports.bestHumidity = (req, res) => {
+  Measure.aggregate( [
+    varMatch, varProject, varSort
+] )
+.then(measure => {
+  res.status(200).json({measure});
+})  
+.catch(err => {
       res.status(500).send({
         message: err.message || 'Some error occurred while retrieving measure.'
       }); 

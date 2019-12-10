@@ -34,6 +34,10 @@ measureRouter.get('/humidi',(req, res) => {
 measureRouter.get('/polluda',(req, res) => {
     measure.moyenneAirPo(req, res);
 });
+// affiche les best mesure humidity
+measureRouter.get('/best',(req, res) => {
+    measure.bestHumidity(req, res);
+});
 
 
 module.exports = measureRouter;

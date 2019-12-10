@@ -49,7 +49,6 @@ exports.create = (req, res) => {
 
   // Create a new User
   const user = new User({
-    _Id: req.body._Id,
     location: req.body.location,
     personsInHouse: req.body.personsInHouse || '',
     houseSize: req.body.houseSize || '',
@@ -91,5 +90,41 @@ exports.delete = (req, res) => {
       return res.status(500).send({
         message: 'Could not delete user with id ' + req.params.userId
       });
+    });
+};
+
+// nombre big parmis les users
+exports.big = (req, res) => {
+  User.find({"houseSize" : "big"}).count()
+    .then(user => {
+      res.status(200).json({user});
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: err.message || 'Some error occurred while retrieving measure.'
+      }); 
+    });
+};
+// nombre small parmis les users
+exports.small = (req, res) => {
+  User.find({"houseSize" : "small"}).count()
+    .then(user => {
+      res.status(200).json({user});
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: err.message || 'Some error occurred while retrieving measure.'
+      }); 
+    });
+};// nombre medium parmis les users
+exports.medium = (req, res) => {
+  User.find({"houseSize" : "medium"}).count()
+    .then(user => {
+      res.status(200).json({user});
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: err.message || 'Some error occurred while retrieving measure.'
+      }); 
     });
 };
