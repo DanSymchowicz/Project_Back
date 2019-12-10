@@ -3,7 +3,8 @@ const Measure = require('../models/measure');
 // Retrieve and return all sensors from the database.
 exports.findAll = (req, res) => {
     Measure.find()
-      .then(measure => {
+  
+    .then(measure => {
         res.send(measure);
       })
       .catch(err => {
@@ -12,6 +13,45 @@ exports.findAll = (req, res) => {
         }); 
       });
   };
+  
+
+  // nombre d'humide
+exports.humidity = (req, res) => {
+  Measure.find({"type" : "humidity"}).count()
+    .then(measure => {
+      res.status(200).json({measure});
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: err.message || 'Some error occurred while retrieving measure.'
+      }); 
+    });
+};
+
+// nombre de temperature
+exports.temperature = (req, res) => {
+  Measure.find({"type" : "temperature"}).count()
+    .then(measure => {
+      res.status(200).json({measure});
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: err.message || 'Some error occurred while retrieving measure.'
+      }); 
+    });
+};
+// nombre d'airPollution'
+exports.airpo = (req, res) => {
+  Measure.find({"type" : "airPollution"}).count()
+    .then(measure => {
+      res.status(200).json({measure});
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: err.message || 'Some error occurred while retrieving measure.'
+      }); 
+    });
+};
 
   // Find a single measure with a MeasureId
 exports.findOne = (req, res) => {
@@ -35,3 +75,5 @@ exports.findOne = (req, res) => {
         });
       });
   };
+
+  // trouver et comter mes capteur humidity
