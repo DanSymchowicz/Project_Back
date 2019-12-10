@@ -12,6 +12,6 @@ usersRouter.get('/get/:userId',user.findOne);
 usersRouter.post('/add', user.create);
 
 //suppression d'un user avec l'ID
-usersRouter.delete('/del/:userId', user.delete);
+usersRouter.delete('/delete/:userId', user.delete);
 
 module.exports = usersRouter;
