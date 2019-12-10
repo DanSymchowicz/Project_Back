@@ -14,7 +14,7 @@ const measureSchema = new mongoose.Schema({
         required: true
     },
     sensorID: {
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         required: true
     },
     value: {
