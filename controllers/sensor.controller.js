@@ -36,3 +36,52 @@ exports.findOne = (req, res) => {
         });
       });
   };
+
+  // nombre de capteur dans la livingroom
+exports.livingroom = (req, res) => {
+  Sensor.find({"location" : "livingroom"}).count()
+    .then(measure => {
+      res.status(200).json({measure});
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: err.message || 'Some error occurred while retrieving measure.'
+      }); 
+    });
+};
+    // nombre de capteur dans la bathroom
+exports.bathroom = (req, res) => {
+  Sensor.find({"location" : "bathroom"}).count()
+    .then(measure => {
+      res.status(200).json({measure});
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: err.message || 'Some error occurred while retrieving measure.'
+      }); 
+    });
+};
+    // nombre de capteur dans la bedroom
+exports.bedroom = (req, res) => {
+  Sensor.find({"location" : "bedroom"}).count()
+    .then(measure => {
+      res.status(200).json({measure});
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: err.message || 'Some error occurred while retrieving measure.'
+      }); 
+    });
+};
+    // nombre de capteur dans la entrance
+exports.entrance = (req, res) => {
+  Sensor.find({"location" : "entrance"}).count()
+    .then(measure => {
+      res.status(200).json({measure});
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: err.message || 'Some error occurred while retrieving measure.'
+      }); 
+    });
+};
